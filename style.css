@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  background-color: var(--eggshell);
+  display: grid;
+  place-items: center;
+  font-family: "Outfit", "Young Serif";
+  font-size: 16px;
+  color: var(--dark-charcoal);
+  margin: 100px;
+}
+
+li::marker {
+  color: var(--dark-raspberry);
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: 600;
+  color: var(--wenge-brown);
+}
+
+.recipe {
+  width: min(90%, 736px);
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 32px;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+/* Header */
+
+.header-img {
+  display: block;
+  width: 656px;
+  border-radius: 13px;
+  margin-bottom: 40px;
+}
+
+.header-name {
+  font-family: "Young Serif";
+  font-weight: 400;
+  margin-bottom: 24px;
+  font-size: 40px;
+  color: var(--dark-charcoal);
+  line-height: 1.1;
+}
+
+.header-text {
+  font-size: 16px;
+  font-weight: 250;
+}
+
+.header-info {
+  padding: 28px;
+  background-color: var(--rose-white);
+  border-radius: 10px;
+  font-weight: 300;
+}
+
+.preperation-head {
+  font-size: 20px;
+  margin-bottom: 16px;
+  line-height: 0.9;
+}
+
+.preperation-head .bold {
+  color: var(--dark-raspberry);
+}
+
+.p-list {
+  margin-left: 20px;
+}
+
+.p-lists {
+  padding-left: 15px;
+}
+
+.p-lists:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+/* Ingredients */
+
+.ingredients {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.ing-head {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--nutmeg);
+  margin-bottom: 24px;
+  line-height: 0.9;
+}
+
+.ing-list {
+  margin-left: 20px;
+}
+
+.ing-lists {
+  padding-left: 20px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  height: 24px;
+  font-size: 15px;
+}
+
+.ing-lists:last-of-type {
+  margin-bottom: 24px;
+}
+
+/* Instructions */
+
+.instructions {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.int-head {
+  padding-bottom: 24px;
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--nutmeg);
+  line-height: 0.9;
+}
+
+.int-list {
+  margin-left: 20px;
+}
+
+.int-list li::marker {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.int-lists {
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.int-lists:last-of-type {
+  margin-bottom: 32px;
+}
+
+.int-lists .bold {
+  font-weight: 600;
+}
+
+/* Nutrition */
+
+.nut-head {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--nutmeg);
+  line-height: 0.9;
+}
+
+.nut-text {
+  margin: 24px 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+th,
+td {
+  width: 300px;
+  padding: 12px;
+  height: 24px;
+  text-align: start;
+  padding-left: 30px;
+}
+
+th {
+  font-weight: 300;
+}
+
+td {
+  color: var(--nutmeg);
+  font-weight: 600;
+}
+
+footer {
+  margin: 5px 0;
+}
+
+footer a:link,
+:visited,
+:hover,
+:active {
+  color: var(--dark-charcoal);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--dark-raspberry);
+  font-weight: 600;
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+  .recipe {
+    width: min(90%, 600px);
+    padding: 40px;
+  }
+  .header-img {
+    width: 520px;
+  }
+}
+
+@media (max-width: 870px) {
+  .recipe {
+    width: min(90%, 470px);
+  }
+  .header-img {
+    width: 390px;
+  }
+  footer {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 725px) {
+  body {
+    margin: 50px;
+  }
+}
+@media (max-width: 625px) {
+  body {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 525px) {
+  body {
+    margin: 0px;
+  }
+  .recipe {
+    width: 375px;
+    border-radius: 0;
+    padding: 0 0 25px 0;
+  }
+  .header-img {
+    width: 375px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    padding: 0;
+  }
+  .header-name,
+  .header-text {
+    padding: 0 32px;
+    line-height: 1.5;
+  }
+  .header-name {
+    font-size: 37px;
+    line-height: 1;
+  }
+  .header-info {
+    margin: 32px auto;
+    border-radius: 10px;
+    width: 311px;
+  }
+  .ingredients {
+    width: 311px;
+    margin: 0 auto;
+  }
+
+  .ing-lists:last-of-type {
+    margin-bottom: 44px;
+  }
+  .instructions {
+    width: 311px;
+  }
+  .nutrition {
+    width: 311px;
+  }
+}
